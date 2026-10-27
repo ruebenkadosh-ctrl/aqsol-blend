@@ -1,0 +1,36 @@
+{
+  "status": "Protocol fixed before external error computation; endpoint and license review required before launch",
+  "models": [
+    "frozen Mordred ensemble",
+    "frozen preceding ErG/SVR ensemble",
+    "fixed random forest baseline trained only on AqSolDB train_val"
+  ],
+  "primary_prediction": "Mean of five per-seed predictions for each frozen ensemble; identical aggregation for both. Distinct from the TDC five-run mean MAE.",
+  "baseline": {
+    "n_estimators": 500,
+    "min_samples_leaf": 2,
+    "max_features": 1.0,
+    "random_state": 20261026,
+    "n_jobs": 6,
+    "representation": "210 RDKit descriptors with original deterministic failure-to-zero policy",
+    "training": "All train_val rows, no external labels, no tuning"
+  },
+  "cohort": "Water SMILES O; 297.15\u2013299.15 K inclusive; all AqSolDB structures excluded under parent/neutral/tautomer/stereo-insensitive matching; conservative heavy-element composition exclusion for failed reference structure; exclude fingerprint Tanimoto 1.0 versus train_val",
+  "units": "Use supplied LogS(mol/L), not log mole fraction; no new unit conversion. Missing/nonfinite labels excluded with counts after label access. Published conversion approximations must be disclosed.",
+  "aggregation": "For each standardized parent, first median across rows per Source, then median across sources. Predictions use each unique raw SMILES once and are averaged within parent. No selective solid-form filtering after errors.",
+  "metrics": [
+    "primary molecule-level MAE",
+    "secondary RMSE",
+    "paired MAE difference vs predecessor and RF"
+  ],
+  "uncertainty": "2000 paired molecule bootstrap resamples, fixed RNG 20261026; percentile 95% intervals. Source dependence remains a limitation.",
+  "subsets": "Prespecified nearest-training Tanimoto below 0.3, 0.3\u20130.6, and >=0.6; descriptive counts and MAE, no subgroup tuning.",
+  "one_shot": "Save all model predictions and hashes before loading targets for scoring; exclusive started marker; preserve all results, never choose weights or dataset based on external errors.",
+  "limitations": [
+    "No pH metadata",
+    "Most rows have no solid-form label",
+    "Different literature sources and conditions; external transfer evaluation, not universally clean intrinsic-solubility test"
+  ],
+  "cohort_sha256": "b36293798afddad4f7fd4f1deeda1b1eb7b20f7179fc844ac58b674275d1e900",
+  "n_parent": 361
+}

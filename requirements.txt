@@ -1,0 +1,12 @@
+numpy==1.26.4
+pandas==2.3.3
+scikit-learn==1.9.1
+lightgbm==4.7.0
+catboost==1.2.10
+rdkit==2023.9.6
+joblib==1.6.0
+PyTDC==1.1.15
+networkx==3.6.1
+scipy==1.17.1
+six==1.17.0
+mordredcommunity==2.0.7

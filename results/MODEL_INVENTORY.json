@@ -1,0 +1,55 @@
+{
+  "note": "Structural complexity; not a neural-network parameter count. Five benchmark runs, not one 15-model scored ensemble.",
+  "runs": [
+    {
+      "seed": 1,
+      "lightgbm_trees": 2096,
+      "lightgbm_leaves": 132048,
+      "catboost_trees": 2200,
+      "catboost_leaves": 563200,
+      "svr_support_vectors": 5831,
+      "svr_input_features": 210,
+      "model_bytes": 32234489
+    },
+    {
+      "seed": 2,
+      "lightgbm_trees": 690,
+      "lightgbm_leaves": 43470,
+      "catboost_trees": 1143,
+      "catboost_leaves": 292608,
+      "svr_support_vectors": 5824,
+      "svr_input_features": 210,
+      "model_bytes": 19137400
+    },
+    {
+      "seed": 3,
+      "lightgbm_trees": 2489,
+      "lightgbm_leaves": 156807,
+      "catboost_trees": 1455,
+      "catboost_leaves": 372480,
+      "svr_support_vectors": 5852,
+      "svr_input_features": 210,
+      "model_bytes": 31485939
+    },
+    {
+      "seed": 4,
+      "lightgbm_trees": 1183,
+      "lightgbm_leaves": 74529,
+      "catboost_trees": 2109,
+      "catboost_leaves": 539904,
+      "svr_support_vectors": 5849,
+      "svr_input_features": 210,
+      "model_bytes": 26324084
+    },
+    {
+      "seed": 5,
+      "lightgbm_trees": 507,
+      "lightgbm_leaves": 31941,
+      "catboost_trees": 2199,
+      "catboost_leaves": 561776,
+      "svr_support_vectors": 4284,
+      "svr_input_features": 210,
+      "model_bytes": 19910434
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "scope": "README inference command with extracted distribution ZIP in fresh environment",
+  "all_five_predictions_match_original_exactly": true
+}

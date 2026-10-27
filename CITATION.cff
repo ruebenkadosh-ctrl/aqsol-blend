@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this research software when referring to this implementation."
+title: "AqSol-Blend"
+type: software
+authors:
+  - family-names: Kadosh
+    given-names: Rueben
+version: 0.1.0
+repository-code: "https://github.com/ruebenkadosh-ctrl/aqsol-blend"

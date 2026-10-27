@@ -1,0 +1,41 @@
+{
+  "scope": "Aligned saved development prediction comparison, not test scoring",
+  "seeds": [
+    {
+      "seed": 1,
+      "rows": 999,
+      "max_absolute_prediction_difference": 0.0,
+      "mean_absolute_prediction_difference": 0.0,
+      "matches_at_1e_8": true
+    },
+    {
+      "seed": 2,
+      "rows": 999,
+      "max_absolute_prediction_difference": 0.0,
+      "mean_absolute_prediction_difference": 0.0,
+      "matches_at_1e_8": true
+    },
+    {
+      "seed": 3,
+      "rows": 999,
+      "max_absolute_prediction_difference": 0.0,
+      "mean_absolute_prediction_difference": 0.0,
+      "matches_at_1e_8": true
+    },
+    {
+      "seed": 4,
+      "rows": 999,
+      "max_absolute_prediction_difference": 0.0,
+      "mean_absolute_prediction_difference": 0.0,
+      "matches_at_1e_8": true
+    },
+    {
+      "seed": 5,
+      "rows": 2940,
+      "max_absolute_prediction_difference": 0.0,
+      "mean_absolute_prediction_difference": 0.0,
+      "matches_at_1e_8": true
+    }
+  ],
+  "all_match_at_1e_8": true
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "Separate workspace, metadata preparation from source inputs; no model scoring",
+  "cohort_sha256": "b36293798afddad4f7fd4f1deeda1b1eb7b20f7179fc844ac58b674275d1e900",
+  "matches_original": true,
+  "rows": 421,
+  "parents": 361
+}

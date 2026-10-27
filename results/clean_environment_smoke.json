@@ -1,0 +1,32 @@
+{
+  "scope": "Fresh environment inference smoke only; no retraining or benchmark rescoring",
+  "python": "3.11.15",
+  "platform": "Darwin",
+  "architecture": "arm64",
+  "pip_check": "passed",
+  "openmp": "DYLD_LIBRARY_PATH points to fresh scikit-learn wheel .dylibs",
+  "smiles": [
+    "CCO"
+  ],
+  "per_seed": [
+    [
+      1.1749556503283718
+    ],
+    [
+      1.1527260441767848
+    ],
+    [
+      1.1553850180092071
+    ],
+    [
+      1.1610700924013755
+    ],
+    [
+      0.7987401362980204
+    ]
+  ],
+  "mean": [
+    1.0885753882427518
+  ],
+  "maximum_absolute_difference_from_original_smoke": 0.0
+}

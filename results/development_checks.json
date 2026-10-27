@@ -1,0 +1,94 @@
+{
+  "scope": "Saved development predictions only; no training or official test access. Reused overlapping folds, not independent confirmation. Fixed solubility bins; no tuning. Canonical overlap is diagnostic, not a claim of label leakage.",
+  "splits": [
+    {
+      "file": "work/tdc_research_v25/SymmetricTree_seed101.npz",
+      "baseline_mae": 0.7807091733266084,
+      "candidate_mae": 0.7719799477232788,
+      "gain": 0.008729225603329501,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v25/SymmetricTree_seed17.npz",
+      "baseline_mae": 0.7599193822865975,
+      "candidate_mae": 0.7505842232218302,
+      "gain": 0.009335159064767362,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v25/SymmetricTree_seed29.npz",
+      "baseline_mae": 0.6979852979522573,
+      "candidate_mae": 0.6821622225080802,
+      "gain": 0.015823075444177014,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v25/SymmetricTree_seed43.npz",
+      "baseline_mae": 0.6524490377344908,
+      "candidate_mae": 0.6417385747033187,
+      "gain": 0.010710463031171968,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v25/SymmetricTree_seed71.npz",
+      "baseline_mae": 1.0041559199534609,
+      "candidate_mae": 1.0025983128214704,
+      "gain": 0.0015576071319905072,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v26/SymmetricTree_seed1.npz",
+      "baseline_mae": 0.7824926214621638,
+      "candidate_mae": 0.7846963607397578,
+      "gain": -0.0022037392775940664,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v26/SymmetricTree_seed2.npz",
+      "baseline_mae": 0.7126207609509158,
+      "candidate_mae": 0.6961435729884657,
+      "gain": 0.016477187962449954,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v26/SymmetricTree_seed3.npz",
+      "baseline_mae": 0.7286308919383945,
+      "candidate_mae": 0.7243425056143812,
+      "gain": 0.0042883863240131045,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v26/SymmetricTree_seed4.npz",
+      "baseline_mae": 0.7293233583750004,
+      "candidate_mae": 0.7209340745276511,
+      "gain": 0.008389283847349062,
+      "canonical_overlap_with_remaining_development": 0
+    },
+    {
+      "file": "work/tdc_research_v26/SymmetricTree_seed5.npz",
+      "baseline_mae": 1.0049256387953176,
+      "candidate_mae": 0.9998726075803139,
+      "gain": 0.005053031215003767,
+      "canonical_overlap_with_remaining_development": 0
+    }
+  ],
+  "mean_gain": 0.007815968034665818,
+  "wins": 9,
+  "groups": {
+    "below_minus4": {
+      "mean_split_gain": 0.021303189699093207,
+      "positive_splits": 9,
+      "observations_with_repeats": 4470
+    },
+    "minus4_to_minus2": {
+      "mean_split_gain": 0.007031190111066216,
+      "positive_splits": 9,
+      "observations_with_repeats": 3868
+    },
+    "above_minus2": {
+      "mean_split_gain": 0.00268204147198889,
+      "positive_splits": 8,
+      "observations_with_repeats": 5534
+    }
+  }
+}

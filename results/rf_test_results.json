@@ -1,0 +1,6 @@
+{
+  "n": 1997,
+  "mae": 0.821133440140538,
+  "rmse": 1.121316025811481,
+  "scope": "Post hoc single RF fit on all 7985 development rows; not TDC five-seed protocol. Fixed model previously evaluated externally; no tuning."
+}

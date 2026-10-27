@@ -1,0 +1,6 @@
+{
+  "commit": "6a6072d6825112c7d55e79c03ceb724739d956ab",
+  "url": "https://raw.githubusercontent.com/levakrasnovs/BigSolDBv2.0/6a6072d6825112c7d55e79c03ceb724739d956ab/BigSolDBv2.2.csv",
+  "header": "SMILES_Solute,Temperature_K,Solvent,SMILES_Solvent,Solubility(mole_fraction),Solubility(mol/L),LogS(mol/L),LogS(mole_fraction),Compound_Name,CAS,PubChem_CID,FDA_Approved,Source,solid_form_label",
+  "scope": "Schema inspection only; no label values printed or scores computed"
+}

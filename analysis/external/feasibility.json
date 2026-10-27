@@ -1,0 +1,12 @@
+{
+  "dataset_sha256": "6b63f86601369f92530bedf6b93c3fb92a2731390b28a0aabf55ad005acba401",
+  "total_rows": 125752,
+  "water_rows": 7577,
+  "water_297_15_to_299_15K_rows": 848,
+  "eligible_rows": 424,
+  "eligible_unique_parent_identities": 364,
+  "aqsoldb_rows_excluded_against": 9982,
+  "standardization_failures": 1,
+  "unresolved_aqsoldb_structures": 1,
+  "endpoint_warning": "Aqueous logS may differ by pH, solid form and conversion; compatibility review pending. No error metrics calculated."
+}

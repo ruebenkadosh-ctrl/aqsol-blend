@@ -1,0 +1,61 @@
+{
+  "n_molecules": 360,
+  "missing_label_rows": 1,
+  "metrics": {
+    "current": {
+      "mae": 1.0076334405544969,
+      "rmse": 1.3183136383514291
+    },
+    "previous": {
+      "mae": 1.0168556747018374,
+      "rmse": 1.3345686214439796
+    },
+    "rf": {
+      "mae": 1.065358277170291,
+      "rmse": 1.4150547322312985
+    }
+  },
+  "paired": {
+    "previous": {
+      "gain_current": 0.009222234147340322,
+      "bootstrap95": [
+        -0.0011933254458686175,
+        0.01905217651801531
+      ]
+    },
+    "rf": {
+      "gain_current": 0.05772483661579403,
+      "bootstrap95": [
+        0.022023398003906427,
+        0.0907617356738248
+      ]
+    }
+  },
+  "subsets": {
+    "below_0.3": {
+      "n": 69,
+      "mae": {
+        "current": 1.2426626822790203,
+        "previous": 1.2749190024201724,
+        "rf": 1.291365986072573
+      }
+    },
+    "0.3_to_0.6": {
+      "n": 210,
+      "mae": {
+        "current": 0.9635586067196018,
+        "previous": 0.9658070811253684,
+        "rf": 1.0442852211624247
+      }
+    },
+    "at_least_0.6": {
+      "n": 81,
+      "mae": {
+        "current": 0.9216914334722229,
+        "previous": 0.929372156658545,
+        "rf": 0.92746704071837
+      }
+    }
+  },
+  "scope": "External transfer evaluation; solvent-volume conversion approximation, pH/solid-form uncertainty and source dependence limit comparability. Fixed five-seed average, not TDC five-run metric."
+}

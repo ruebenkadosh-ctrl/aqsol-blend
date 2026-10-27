@@ -1,0 +1,12 @@
+{
+  "scope": "Fresh label-free extraction audit; not historical timeout incidence",
+  "n_input_rows": 364,
+  "descriptors_per_row": 1612,
+  "molecules_with_any_failure": 364,
+  "molecules_with_timeout": 0,
+  "descriptor_failure_counts": {
+    "ZeroDivisionError": 10304,
+    "ValueError": 54159,
+    "MultipleFragments": 14272
+  }
+}
