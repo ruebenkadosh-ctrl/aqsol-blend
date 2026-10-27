@@ -69,4 +69,4 @@ Run `python scripts/check_release.py` for report consistency and syntax checks. 
 
 ## Release status and data availability
 
-Author: Rueben Kadosh. Final manuscript review and project licensing remain pending. No open-source license is granted in this release; public availability alone does not grant reuse rights. No credentials or raw benchmark data are included. Obtain AqSolDB through TDC and BigSolDB v2.2 from [its archived release](https://zenodo.org/records/22648301). BigSolDB is licensed CC BY 4.0; third-party software and other datasets retain their respective licenses.
+Author: Rueben Kadosh. Final manuscript review remains pending. Original project code is licensed under the MIT License; see LICENSE. This does not relicense third-party datasets, dependencies, or the manuscript. No credentials or raw benchmark data are included. Obtain AqSolDB through TDC and BigSolDB v2.2 from [its archived release](https://zenodo.org/records/22648301). BigSolDB is licensed CC BY 4.0; third-party software and other datasets retain their respective licenses.
