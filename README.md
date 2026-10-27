@@ -27,7 +27,7 @@ Each seed blends:
 
 The weights were inherited and fixed before external evaluation. These are established algorithms. The study documents their development, component contributions and external performance.
 
-The manuscript is undergoing final editorial review and is not included in this code release. [REPRODUCIBILITY.md](REPRODUCIBILITY.md) separates completed verification from work still pending.
+Read the [manuscript (PDF)](docs/manuscript.pdf). This manuscript has not yet been accepted or announced by arXiv. The manuscript is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); the project code remains MIT-licensed. [REPRODUCIBILITY.md](REPRODUCIBILITY.md) separates completed verification from work still pending.
 
 ## Environment
 
