@@ -1,6 +1,11 @@
 # AqSol-Blend
 
-A CPU-trained ensemble for aqueous solubility prediction using LightGBM, CatBoost and support-vector regression. Research code release by **Rueben Kadosh**. This is not an accepted TDC submission.
+**A CPU-Trained Descriptor Ensemble for Aqueous Solubility Prediction**  
+Rueben Kadosh
+
+[Paper](docs/manuscript.pdf) · [Trained models](https://github.com/ruebenkadosh-ctrl/aqsol-blend/releases/tag/v0.1.0) · [Reproducibility](REPRODUCIBILITY.md)
+
+AqSol-Blend combines LightGBM, CatBoost and support-vector regression to predict aqueous solubility from molecular structure. This repository accompanies the manuscript and provides training and inference scripts, frozen model files, and evaluation results. The experiments examine how molecular representations affect an ensemble of conventional regressors, with evaluation on TDC AqSolDB and an overlap-screened BigSolDB cohort.
 
 ## Results
 
@@ -11,11 +16,11 @@ A CPU-trained ensemble for aqueous solubility prediction using LightGBM, CatBoos
 | Same external cohort | Previous ensemble | 1.017 | 1.335 |
 | Same external cohort | Fixed RDKit random forest | 1.065 | 1.415 |
 
-The TDC result is the mean and standard deviation of five per-seed MAEs. Four official evaluations occurred during adaptive development. It is not an independently confirmed first-place ranking.
+TDC values are the mean and standard deviation of five per-seed MAEs. External predictions use the average of the five ensembles. On the external cohort, the paired MAE improvement over random forest is 0.058 (95% bootstrap interval 0.022–0.091); the improvement over the preceding ensemble is 0.009 (−0.001–0.019).
 
-External predictions average the five per-seed ensembles. The protocol was fixed and predictions committed before external labels were loaded for scoring. The paired bootstrap MAE improvement over random forest was 0.058 (95% interval 0.022–0.091); improvement over the previous ensemble was 0.009 (−0.001–0.019). The latter interval includes zero.
+### Evaluation scope
 
-The external cohort uses BigSolDB v2.2 water measurements near 25 °C, with standardized molecular overlaps with AqSolDB removed. Its concentration convention, missing pH and solid-form information, and possible shared literature sources limit comparisons across datasets. It tests transfer to this cohort, not universal solubility generalization.
+Four sequential TDC test evaluations occurred during development, so the benchmark result reflects adaptive test exposure. It is a locally computed result, not an accepted leaderboard ranking. The external protocol and predictions were fixed before scoring. BigSolDB measurements differ in concentration convention and available measurement metadata; the manuscript describes these limitations and the overlap-removal procedure.
 
 ## Model
 
@@ -25,9 +30,7 @@ Each seed blends:
 - 22.5% CatBoost using 1,612 Mordred descriptors;
 - 10% RBF SVR using robust-scaled RDKit descriptors.
 
-The weights were inherited and fixed before external evaluation. These are established algorithms. The study documents their development, component contributions and external performance.
-
-Read the [manuscript (PDF)](docs/manuscript.pdf). This manuscript has not yet been accepted or announced by arXiv. The manuscript is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); the project code remains MIT-licensed. [REPRODUCIBILITY.md](REPRODUCIBILITY.md) separates completed verification from work still pending.
+The mixture weights were fixed before external evaluation. The manuscript reports development comparisons, branch ablations and weight sensitivity.
 
 ## Environment
 
@@ -35,7 +38,7 @@ Use Python 3.11 and install `pip install -r requirements.txt` in a virtual envir
 
 ## Inference
 
-A verified archive of the fifteen frozen model files has been prepared locally; the archive is available in [GitHub Releases](https://github.com/ruebenkadosh-ctrl/aqsol-blend/releases/tag/v0.1.0). Extract the archive into one directory and use that directory as `--models`:
+Download the fifteen frozen model files from [release v0.1.0](https://github.com/ruebenkadosh-ctrl/aqsol-blend/releases/tag/v0.1.0). Extract the archive into one directory and use that directory as `--models`:
 
 ```sh
 python scripts/predict_smiles.py --models /path/to/frozen/package --smiles CCO --output predictions.json
@@ -51,7 +54,7 @@ python scripts/train.py --data-root data --output training_runs --seed 1
 
 Repeat for seeds 1–5. Each run writes a separate `training_runs/seedN` directory and refuses to overwrite it. The inference loader expects the fifteen model files together in one model directory; assemble them explicitly after training. The training script does not score official test labels. Fresh-environment retraining on the same host reproduced all five sets of validation predictions exactly; see `results/training_reproduction.json`. Descriptor timeouts may depend on hardware.
 
-## Recorded evidence
+## Evaluation artifacts
 
 - `analysis/external/`: original evaluation scripts, provenance, and documented portability gaps.
 - `results/official_results.json`: saved TDC evaluator output.
@@ -61,12 +64,16 @@ Repeat for seeds 1–5. Each run writes a separate `training_runs/seedN` directo
 - `results/branch_analysis.json`: development branch ablations.
 - `results/weight_sensitivity.json`: descriptive sensitivity on reused development splits; weights were not changed.
 - `results/development_checks.json`: development sanity checks.
-- `results/model_archive.json`: verified local model archive digest and size.
+- `results/model_archive.json`: model archive checksum and size.
 - `results/feature_schema.json`: ordered descriptors and feature settings.
 - `results/MODEL_INVENTORY.json`: trees, leaves, support vectors and artifact sizes.
 
 Run `python scripts/check_release.py` for report consistency and syntax checks. This does not retrain models or recompute scores.
 
-## Release status and data availability
+## Data availability
 
-Author: Rueben Kadosh. Final manuscript review remains pending. Original project code is licensed under the MIT License; see LICENSE. This does not relicense third-party datasets, dependencies, or the manuscript. No credentials or raw benchmark data are included. Obtain AqSolDB through TDC and BigSolDB v2.2 from [its archived release](https://zenodo.org/records/22648301). BigSolDB is licensed CC BY 4.0; third-party software and other datasets retain their respective licenses.
+Obtain AqSolDB through TDC and BigSolDB v2.2 from [Zenodo](https://zenodo.org/records/22648301). Raw datasets are not distributed in this repository. BigSolDB is distributed under CC BY 4.0; other datasets and dependencies retain their respective licenses.
+
+## License and manuscript
+
+Original project code is released under the [MIT License](LICENSE). The [manuscript](docs/manuscript.pdf) is available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). It has not yet been announced on arXiv. For author and citation metadata, see [CITATION.cff](CITATION.cff).
